@@ -10,6 +10,7 @@ eureka:
     service-url:
       defaultZone: http://localhost:8001/eureka/
   instance:
+    instance-id: eureka-server(peer1)
     hostname: peer1
 
 
