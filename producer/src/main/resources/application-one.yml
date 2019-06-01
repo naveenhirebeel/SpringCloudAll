@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: producer
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8001/eureka/, http://localhost:8001/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${random.valu}
+#    preferIpAddress: true
+#    hostname: producer
