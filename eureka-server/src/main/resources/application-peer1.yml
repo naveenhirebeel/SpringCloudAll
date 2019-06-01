@@ -10,23 +10,5 @@ eureka:
     service-url:
       defaultZone: http://localhost:8001/eureka/
   instance:
-    instance-id: eureka-server(peer1)
-    hostname: peer1
-
-
-
-
-
-#    service-url: http://peer2:8001/eureka
-#  instance:
+    instance-id: ${spring.application.name}
 #    hostname: peer1
-#    defaultZone: http://peer1:8000/eureka
-
-#server:
-#  port: 8091
-#eureka:
-#  instance:
-#    hostname: peer2
-#  client:
-#    serviceUrl:
-#      defaultZone: http://peer1:8090/eureka
