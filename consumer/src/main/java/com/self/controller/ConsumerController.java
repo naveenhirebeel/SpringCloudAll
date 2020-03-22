@@ -1,5 +1,6 @@
 package com.self.controller;
 
+import com.self.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,11 +17,11 @@ public class ConsumerController {
     EmployeeClient employeeClient;
 
     @GetMapping
-    ResponseEntity<String> fetchEMployee(){
+    ResponseEntity<Employee> fetchEMployee(){
 
         System.out.println("Reached Consumer Controller.");
         System.out.println(employeeClient.getEmployees());
 
-        return ResponseEntity.ok("OK");
+        return ResponseEntity.ok(employeeClient.getEmployees());
     }
 }
