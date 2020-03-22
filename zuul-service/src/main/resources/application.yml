@@ -16,10 +16,10 @@ info:
 zuul:
   routes:
     producer:
-      path: /producer-api/**
+      path: /producer/**
       service-id: producer
     consumer:
-      path: /consumer-api/**
+      path: /consumer/**
       service-id: consumer
       
 eureka:
